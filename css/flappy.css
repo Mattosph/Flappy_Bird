@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box; /*includes in the props width and height, the border and padding sizes*/
+
+}
+
+
+@font-face{
+    font-family: 'Pixel';
+    src:url('../fonts/Pixel.ttf'); /*Using extenal font API*/
+}
+
+[wm-flappy]{
+    position: relative;
+    border: 5px solid deepskyblue;
+    height:700px;
+    width: 1200px; /*deffining the game area*/
+    margin: 15px;
+    background-color: deepskyblue;
+    overflow:hidden; /*any objects out of game area will not be shown during the game barriers animation*/
+}
+
+.bird{
+    position:absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+    
+}
+
+.barriers-pair{
+    position:absolute;
+    top:0;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barrier{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barrier .barrier-border{
+    height:30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border:2px solid #000;
+}
+
+.barrier .barrier-body{
+    height: 150px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left:2px solid #000;
+    border-right:2px solid #000;
+}
+
+.progress{
+    position: absolute;
+    top:10px;
+    right:10px;
+    font-family: Pixel;
+    font-size:70px;
+    z-index: 100;
+}
